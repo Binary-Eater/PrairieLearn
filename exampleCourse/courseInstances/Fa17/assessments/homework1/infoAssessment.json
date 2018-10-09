@@ -1,0 +1,20 @@
+{
+    "uuid": "294b5841-b705-4720-b5d4-266b82e9c6c8",
+    "type": "Homework",
+    "title": "Homework for automatic test suite",
+    "set": "Homework",
+    "number": "1",
+    "allowIssueReporting": true,
+    "allowAccess": [
+        {
+            "credit": 100
+        }
+    ],
+    "zones": [
+        {
+            "questions": [
+                {"id": "MP1",           "points": 3, "maxPoints": 14}
+            ]
+        }
+    ]
+}

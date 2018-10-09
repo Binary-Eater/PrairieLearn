@@ -1,0 +1,15 @@
+{
+    "uuid": "a0444b41-1472-4aa5-a024-ee1091bdab8e",
+    "title": "CS 296-25 MP1",
+    "topic": "Coding",
+    "tags": ["code", "v3"],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "rahulr2/cs296-25-docker-image",
+        "serverFilesCourse": ["clojure_autograder/"],
+        "entrypoint": "/grade/serverFilesCourse/clojure_autograder/run.sh"
+    }
+}

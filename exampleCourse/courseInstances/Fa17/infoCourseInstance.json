@@ -1,0 +1,16 @@
+{
+    "uuid": "a2c16b02-7f73-43d0-b5ec-5eb1efb8ae51",
+    "shortName": "Fa17",
+    "longName": "Fall 2017",
+    "userRoles": {
+        "mattox@illinois.edu": "Instructor",
+        "asan2@illinois.edu": "TA",
+        "rahulr2@illinois.edu": "TA"
+    },
+    "allowAccess": [
+        {
+            "startDate": "1800-01-19T00:00:01",
+            "endDate": "2400-05-13T23:59:59"
+        }
+    ]
+}
