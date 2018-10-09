@@ -3,6 +3,8 @@
 
 * __next version__ - XXXX-XX-XX
 
+* __3.1.0__ - 2018-10-08
+
   * Add string input element (Mariana Silva).
 
   * Add element to display matrix in latex format (Mariana Silva).
@@ -12,6 +14,44 @@
   * Add `tools/dump_*` scripts to filter and anonymize per-course dumps (Matt West).
 
   * Add `pl-prairiedraw-figure` element and update PrairieDraw graphics documentation. (Ray Essick).
+
+  * Add Control-C hint on server startup (Dave Mussulman).
+
+  * Add improved login screen (Nathan Walters).
+
+  * Add `pl-matrix-component-input` element (Mariana Silva).
+
+  * Add new question renderer behind feature flag (Nathan Walters).
+
+  * Add partial credit option to `pl-checkbox` element (Mariana Silva).
+
+  * Add docs and two optional attributes, `display` and `label`, to `pl-symbolic-input` (Tim Bretl).
+
+  * Add `prevent-select` attribute to `pl-code` element (Nathan Walters).
+
+  * Add personal access token management (Nathan Walters).
+
+  * Add `maxPoints` option to zones (Tim Bretl).
+
+  * Add `bestQuestions` option to zones (Tim Bretl).
+
+  * Add `allow-complex` attribute for `pl-symbolic-input` (Tim Bretl).
+
+  * Add warm up for Python worker processes (Matt West).
+
+  * Add better handling of client sockets on externally graded questions (Nathan Walters).
+
+  * Add postgresql permissions for root in Docker for development (Dave Mussulman).
+
+  * Add CSV scores upload for questions or assessments (Matt West).
+
+  * Add Pillow to the `centos7-python` container (Dave Mussulman).
+
+  * Add more question and assessment JSON validity checking on load (Dave Mussulman).
+
+  * Add scroll bar in `pl-matrix-component-input` (Mariana Silva)
+
+  * Fix `pl-file-editor` to allow display empty text editor and add option to include text from source file (Mariana Silva).
 
   * Fix HTML rendering by reverting `cheerio.js` to `0.22.0` (Matt West).
 
@@ -31,6 +71,56 @@
 
   * Fix copy button after `clipboard.js` package update (Tim Bretl).
 
+  * Fix `pl-multiple-choice` so feedback is inside label and so inline option produces valid HTML (Tim Bretl).
+
+  * Fix "Logout" button with Google authentication (Matt West).
+
+  * Fix error message when an authentication method is not enabled (Matt West).
+
+  * Fix "Logout" button with Azure authentication (Matt West).
+
+  * Fix docs for `clientServerFiles` template variables (Rahul Rameshbabu).
+
+  * Fix bug with rendering when the render cache is disabled (Nathan Walters).
+
+  * Fix outdated pycryptdome version (to 3.6.6) (Matt West).
+
+  * Fix bug in `pl-symbolic-input` to handle submission of function names without arguments (Tim Bretl).
+
+  * Fix bug in `pl-symbolic-input` to handle submissions that simplify to invalid expressions (Tim Bretl).
+
+  * Fix bug in `pl-symbolic-input` to handle the sympy constants I and E properly (Tim Bretl).
+
+  * Fix markup in `pl-multiple-choice` and `pl-checkbox` elements (Nathan Walters).
+
+  * Fix slow v3 questions by using persistent forking python processes (Matt West).
+
+  * Fix spurious `warnOldJobs` log entries (Matt West).
+
+  * Fix label on `pl-string-input` help popover (Matt West).
+
+  * Fix restart of Python `codeCallers` with no active child (Matt West).
+
+  * Fix exampleCourse exam1 to include formula sheet example per docs (Dave Mussulman).
+
+  * Fix docs for `allowIssueReporting` (Matt West).
+
+  * Fix `pl-matrix-component-input` element to adjust height (Mariana Silva).
+
+  * Fix real-time external grading results in exam mode by disabling exam-specific message in the question score panel (Nathan Walters).
+
+  * Fix `tools/dump_filter.sh` to drop `pg_stat_statements` for PostgreSQL 10 (Matt West).
+
+  * Fix slow assessment instance deletes (Matt West).
+
+  * Fix `triangularDistributedLoad` in `PrairieDraw.js` (Mariana Silva).
+
+  * Fix unexpected token error in administrator overview page (Tim Bretl).
+
+  * Fix `pl-matrix-component-input` rendering bug on Safari (Nicolas Nytko)
+
+  * Change `pl-code` to display code from a source file OR inline text (Mariana Silva).
+
   * Change element names to use dashes instead of underscores (Nathan Walters).
 
   * Change deprecated `new Buffer()` calls to `Buffer.from()` (Ray Essick).
@@ -44,6 +134,30 @@
   * Change element attributes to use hyphens instead of underscores (Nathan Walters).
 
   * Change assessment password protection method (Dave Mussulman).
+
+  * Change "0 rows" error to be more descriptive (Dave Mussulman).
+
+  * Change Exam authentication options to always include Google and Azure (Matt West).
+
+  * Change maximum JSON POST size to 1MB (Nathan Walters).
+
+  * Change to prohibit extra `allowAccess` properties (Geoffrey Challen).
+
+  * Change maximum JSON POST size to 1MB or local grader (Nathan Walters).
+
+  * Change required package versions for security (Dave Mussulman).
+
+  * Change `allowIssueReporting` to default to `true` (Matt West).
+
+  * Remove `element_index` from list of arguments passed to elements (Tim Bretl).
+
+  * Change `pl-string-input` to include an attribute for the placeholder (Mariana Silva).
+
+  * Change element documentation to add placeholder attribute to `pl-string-input` (Mariana Silva).
+
+  * Change instructor assessment page into multiple sub-pages (Matt West).
+
+  * Change log level of external grading jobs to reduce syslog volume (Matt West).
 
 * __3.0.0__ - 2018-05-23
 
@@ -64,6 +178,8 @@
   * Add additional information about indices to database descriptions (Nathan Walters).
 
   * Add configurable `homeUrl` to support container deployments (Matt West).
+
+  * Add caching of rendered question panels (Nathan Walters).
 
   * Fix migration 111 to allow re-running (Matt West).
 
