@@ -1,6 +1,8 @@
 # JetBrains IDE files
 /.idea/
 
+.zip
+
 # OS X Finder files
 **/.DS_Store
 
