@@ -6,10 +6,10 @@ import prairielearn as pl
 import random
 
 
-def prepare(element_html, element_index, data):
+def prepare(element_html, data):
     element = lxml.html.fragment_fromstring(element_html)
     required_attribs = ['answers-name']
-    optional_attribs = ['weight', 'correct-answer', 'label', 'suffix', 'display', 'remove-leading-trailing', 'remove-spaces', 'allow-blank']
+    optional_attribs = ['weight', 'correct-answer', 'label', 'suffix', 'display', 'remove-leading-trailing', 'remove-spaces', 'allow-blank', 'placeholder']
     pl.check_attribs(element, required_attribs, optional_attribs)
 
     name = pl.get_string_attrib(element, 'answers-name')
@@ -21,7 +21,7 @@ def prepare(element_html, element_index, data):
         data['correct_answers'][name] = correct_answer
 
 
-def render(element_html, element_index, data):
+def render(element_html, data):
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, 'answers-name')
     label = pl.get_string_attrib(element, 'label', None)
@@ -29,6 +29,7 @@ def render(element_html, element_index, data):
     display = pl.get_string_attrib(element, 'display', 'inline')
     remove_leading_trailing = pl.get_string_attrib(element, 'remove-leading-trailing', False)
     remove_spaces = pl.get_string_attrib(element, 'remove-spaces', False)
+    placeholder = pl.get_string_attrib(element, 'placeholder', None)
 
     if data['panel'] == 'question':
         editable = data['editable']
@@ -40,8 +41,6 @@ def render(element_html, element_index, data):
             template = f.read()
             info = chevron.render(template, info_params).strip()
             info_params.pop('format', None)
-            info_params['shortformat'] = True
-            shortinfo = chevron.render(template, info_params).strip()
 
         html_params = {
             'question': True,
@@ -52,7 +51,7 @@ def render(element_html, element_index, data):
             'remove-spaces': remove_spaces,
             'editable': editable,
             'info': info,
-            'shortinfo': shortinfo,
+            'placeholder': placeholder,
             'uuid': pl.get_uuid()
         }
 
@@ -137,7 +136,7 @@ def render(element_html, element_index, data):
     return html
 
 
-def parse(element_html, element_index, data):
+def parse(element_html, data):
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, 'answers-name')
     # Get allow-blank option
@@ -157,7 +156,7 @@ def parse(element_html, element_index, data):
         data['submitted_answers'][name] = pl.to_json(a_sub)
 
 
-def grade(element_html, element_index, data):
+def grade(element_html, data):
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, 'answers-name')
 
@@ -199,7 +198,7 @@ def grade(element_html, element_index, data):
         data['partial_scores'][name] = {'score': 0, 'weight': weight}
 
 
-def test(element_html, element_index, data):
+def test(element_html, data):
     element = lxml.html.fragment_fromstring(element_html)
     name = pl.get_string_attrib(element, 'answers-name')
     weight = pl.get_integer_attrib(element, 'weight', 1)
