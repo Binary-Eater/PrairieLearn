@@ -54,5 +54,4 @@ echo "[run] autograder completed"
 
 # get the results from the file
 cp $MERGE_DIR'/autograder_wrapper/results.json' $RESULTS_FILE
-cat $MERGE_DIR'/autograder_wrapper/results.json'
 echo "[run] copied results"

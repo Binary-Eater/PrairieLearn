@@ -10,6 +10,7 @@
         "enabled": true,
         "image": "rahulr2/cs296-25-docker-image",
         "serverFilesCourse": ["clojure_autograder/"],
-        "entrypoint": "/grade/serverFilesCourse/clojure_autograder/run.sh"
+        "entrypoint": "/grade/serverFilesCourse/clojure_autograder/run.sh",
+        "enableNetworking": true
     }
 }

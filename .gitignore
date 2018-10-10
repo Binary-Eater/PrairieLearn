@@ -1,7 +1,9 @@
 # JetBrains IDE files
 /.idea/
 
-.zip
+*.zip
+
+package-lock.json
 
 # OS X Finder files
 **/.DS_Store

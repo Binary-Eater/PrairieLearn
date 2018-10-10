@@ -13,7 +13,7 @@
     "zones": [
         {
             "questions": [
-                {"id": "MP1",           "points": 3, "maxPoints": 14}
+                {"id": "MP1",           "points": 3, "maxPoints": 3}
             ]
         }
     ]
